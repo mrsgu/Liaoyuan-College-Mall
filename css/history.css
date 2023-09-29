@@ -1,0 +1,107 @@
+/* 头部模块 */
+.header{
+    width: auto;
+    height: 142px;
+    background-color: #3d82f2;
+    line-height: 21px;
+}
+.header-logo{
+    text-align: center;
+    padding: 21px 0;
+}
+/* 头部模块 */
+
+
+/*导航内容 开始*/
+.main-nav{
+    /* 大盒子样式 */
+    height: 48px;
+    width: auto;
+    background-color: #2e4b7c;
+    text-align: center;
+}
+.warp{
+    /* 二级盒子 */
+  height: 48px;
+  width: auto;
+  margin-left: 238px;
+}
+.main-Nav-LIST{
+    /* 文本盒子 */
+    text-align: center;
+    line-height: 48px;
+}
+.main-Nav-LIST>ul>li{
+    /* 导航栏目li标签样式 */
+    float: left;
+    text-align: center;
+    line-height: 48px;
+    margin: 0 20px 0 20px;
+    font-size: 14px;
+}
+
+.main-Nav-LIST>ul>li>a{
+    /* 导航栏字体颜色 */
+    color:#fffff0;
+}
+.main-Nav-LIST li:hover{
+    opacity: .9;
+    font-size: 18px;
+    color: #ffffff;
+    
+}
+
+/*导航内容 结束*/
+/* 内容部分  开始 */
+.head-Connect{
+    width: 928px;
+    height: 64px;
+    border-bottom: 2px solid #1d499a;
+    margin-left: 30%;
+    margin-top: 45px;
+    background: #ffffff;
+    
+}
+.head-Connect>a{
+    color: gray;
+    font-size: 14px;
+    line-height: 64px;
+    text-align: center;
+    margin-left: 3px
+}
+.connect{
+    
+    width: 928px;
+    height: 620px;
+    margin-left: 30%;
+    background: #ffffff;
+
+}
+.connect>p{
+    text-indent: 2em;
+
+}
+
+
+
+
+/* 内容部分  结束*/
+
+
+
+/* 尾部 开始*/
+.footer{
+    width: 1530px;
+    height: 104px;
+    background: #2e4b7c;
+    color: #fff;
+
+}
+.footer-Content{
+    width: 900px;
+    height: 200px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 15%;
+    font-size: 14px;
+}

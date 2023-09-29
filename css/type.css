@@ -1,0 +1,337 @@
+.long-Box {
+    /* 长条主盒子 */
+    width: auto;
+    height: 33px;
+    background-color: #2267b1;
+}
+
+.long-Box-FLOAT {
+    /* 长条浮动盒子 */
+    width: 519px;
+    height: 33px;
+    margin-left: 55%;
+}
+
+.label-Content {
+    /* 字体内容栏 */
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.label-Content>a {
+    display: inline-block;
+    color: #ffffff;
+    margin: 5px 15px 0 0;
+    margin-bottom: 10px;
+}
+
+.label-Content a:hover {
+    color: #ed712d;
+}
+
+
+
+/* 页面导航栏 开始*/
+
+.nav-List {
+    /* 页面整体导航栏 */
+    width: auto;
+    height: 100px;
+}
+
+.nav-text {
+    float: left;
+}
+
+.nav-text>ul>li>a {
+    display: inline-block;
+    width: 88px;
+    height: 75px;
+    color: #2267b1;
+    text-align: center;
+}
+
+.nav-text>ul>li {
+    float: left;
+    margin-top: 18px;
+    line-height: 75px;
+}
+
+/* 页面导航栏 结束*/
+
+
+
+
+/* 轮播图  1300 440 开始*/
+
+.lunbo {
+     width: 100%;
+    height: 485px;
+}
+.content {width: 1300px;height: 460px; margin: 20px auto;position: relative;}
+#item {
+    width: 100%;
+    height: 100%;
+}
+.item {  position: absolute; opacity: 0; transition: all 1s;}
+.item.active { 
+    opacity: 1;
+}
+.item>img {
+    height: 100%;
+}
+#btn-left {
+    width: 30px;height: 69px;font-size: 30px;color: white;background-color: rgba(0, 0, 0, 0.4);line-height: 69px;padding-left: 5px;
+    z-index: 10;
+    /*始终显示在图片的上层*/
+    position: absolute;left: 0; top: 50%; transform: translateY(-60%);
+    /*使按钮向上偏移居中对齐*/
+    cursor: pointer;opacity: 0;/*平时隐藏*/
+}
+.lunbo:hover #btn-left {
+    /*鼠标滑入，显示图标*/
+    opacity: 1;
+}
+
+#btn-right {
+    width: 26px; height: 69px;font-size: 30px;color: white;background-color: rgba(0, 0, 0, 0.4);line-height: 69px;
+    padding-left: 5px;z-index: 10;position: absolute;right: 0;
+    top: 50%;cursor: pointer;opacity: 0;transform: translateY(-60%);
+}
+
+.lunbo:hover #btn-right {
+    opacity: 1;
+}
+
+#circle {
+    height: 20px; display: flex; position: absolute; bottom: 35px; right: 25px;
+}
+
+.circle {
+    width: 10px; height: 10px; border-radius: 10px; border: 2px solid white; background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;margin: 5px;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+/* 轮播图 结束 */
+/* 功能栏  下拉菜单*/
+/* .conceal>li>a{
+    color: #ffffff;
+}
+.conceal{
+    display: none;
+}
+.conceal1{
+    display: none;
+}
+
+.nav-text :hover .conceal{
+    display: block;
+    clear: both;
+}
+.conceal li:hover a{
+    background: #004aa0;
+}
+.nav-text :hover .conceal1{
+    display: block;
+    clear: both;
+} */
+
+/* 功能栏  下拉菜单*/
+
+/* 校园新闻 */
+.main {
+    /* 主体盒子 */
+    width: auto;
+    height: 550px;
+    box-sizing: border-box;
+}
+
+.second-Box {
+    /* 二级盒子 */
+    width: 1350px;
+    height: 550px;
+    margin-left: 10%;
+}
+
+.school-Paper {
+    /* 校园新闻盒子 */
+    width: 450px;
+    height: 530px;
+    float: left;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+.school-picture {
+    width: 750px;
+    height: 375px;
+    float: left;
+    margin-left: 10%;
+    margin-top: 5px;
+}
+
+.blue-Chunk {
+    /* 小蓝快 */
+    width: 6px;
+    height: 18px;
+    background-color: #004aa0;
+    float: left;
+    margin-top: 22.5px;
+    margin-right: 10px;
+}
+
+.big-Chunk {
+    width: 64px;
+    height: 24px;
+    background-color: #004aa0;
+    margin-left: 16px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.big-Grey-CHUNK {
+    width: 64px;
+    height: 24px;
+    background-color: #f6f6f6;
+    margin-left: 16px;
+    text-align: center;
+    color: #333333;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/*校园新闻盒子    结束 */
+/* 校园服务  开始 */
+.school-Service {
+    width: 800px;
+    height: 530px;
+    margin-left: 37%;
+    margin-top: 10px;
+}
+
+/* 校园服务  结束 */
+.school-Education {
+    /* 教育新闻 */
+    width: 500px;
+    height: 530px;
+    margin-left: 52%;
+    margin-top: 10px;
+
+}
+
+
+
+
+/* 尾部 */
+
+.foot-Main {
+    width: auto;
+    height: 806px;
+    clear: both;
+    margin-top: 15px;
+
+}
+
+.foot {
+    /* 二级盒子 */
+    width: 1300px;
+    height: 806px;
+    margin-left: 10%;
+    background: url(https://www.nwpu.edu.cn/images/body.jpg);
+}
+
+.foot-Double-BOX {
+    width: 300px;
+    height: 150px;
+    margin: 0px 0px 0px 0px;
+    clear: both;
+}
+
+.foot-Small {
+    width: 300px;
+    height: 300px;
+    margin: 50px 0px 0px 0px;
+    float: left;
+}
+
+.foot-Things {
+    width: 300px;
+    height: 300px;
+    margin: 50px 0px 0px 0px;
+    float: left;
+}
+
+/* .foot-Small>img{
+    display: none;
+}
+
+.foot-Small:hover img{
+    display: block;
+}
+.foot-Double-BOX>img{
+    display: none;
+}
+.foot-Double-BOX:hover img{
+    display: block;
+} */
+.small-Size {
+
+    font-size: 20px;
+    font-weight: normal;
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 20px;
+
+}
+
+.small-Size>a {
+    color: #fff;
+}
+
+.foot-Title {
+    font-size: 20px;
+    color: #fff;
+    margin: 0px 5px 10px 15px;
+}
+
+.size {
+    font-size: 16px;
+    color: #fff;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.size>a {
+    color: #fff;
+    margin-top: 25px;
+}
+
+/* .foot-Title :hover span {
+    opacity: 1;
+}
+.foot-Small:hover .foot-Double-BOX{
+    opacity: 1;
+} */
+.small-Size:hover a {
+    color: #ed712d;
+}
+
+.size :hover a {
+    color: #ed712d;
+}
+
+.foot-Logo {
+
+    width: 600px;
+    height: 100px;
+}

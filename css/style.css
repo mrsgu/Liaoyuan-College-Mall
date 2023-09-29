@@ -1,0 +1,397 @@
+/* 头部模块 */
+.header{
+    width: auto;
+    height: 142px;
+    background-color: #3d82f2;
+    line-height: 21px;
+}
+.header-logo{
+    text-align: center;
+    padding: 21px 0;
+}
+/* 头部模块 */
+
+
+/*导航内容 开始*/
+.main-nav{
+    /* 大盒子样式 */
+    height: 48px;
+    width: auto;
+    background-color: #2e4b7c;
+    text-align: center;
+}
+.warp{
+    /* 二级盒子 */
+  height: 48px;
+  width: auto;
+  margin-left: 238px;
+}
+.main-Nav-LIST{
+    /* 文本盒子 */
+    text-align: center;
+    line-height: 48px;
+}
+.main-Nav-LIST>ul>li{
+    /* 导航栏目li标签样式 */
+    float: left;
+    text-align: center;
+    line-height: 48px;
+    margin: 0 20px 0 20px;
+    font-size: 14px;
+}
+
+.main-Nav-LIST>ul>li>a{
+    /* 导航栏字体颜色 */
+    color:#fffff0;
+}
+.main-Nav-LIST li:hover{
+    opacity: .9;
+    font-size: 18px;
+    color: #ffffff;
+    
+}
+
+/*导航内容 结束*/
+/* 轮播图  开始 */
+.slide-Show{
+    /* 轮播图图片大小 */
+     width: 1897px;
+     height: 400px;
+ }
+
+/* 轮播图 结束 */
+/* 校园新闻 */
+.main{
+    /* 主体盒子 */
+    width: auto;
+    height: 380px;
+    border: 1px solid blue;
+
+}
+.second-Box{
+    /* 二级盒子 */
+    width:1400px;
+    height: 380px;
+    border: 1px solid red;
+    margin-left: 10%;
+}
+.school-Paper{
+    /* 校园新闻盒子 */
+    width: 450px;
+    height: 375px;
+    border: 1px solid green;
+    float: left;
+    margin-left: 2%;
+    margin-top: 5px;
+}
+.school-picture{
+    width: 750px;
+    height: 375px;
+    border: 1px solid brown;
+    float: left;
+    margin-left: 8%;
+     margin-top: 5px;
+}
+.blue-Chunk{
+    /* 小蓝快 */
+    width: 6px;
+    height: 18px;
+    background-color: #004aa0;
+    float: left;
+    margin-top: 22.5px;
+    margin-right: 10px;
+}
+.big-Chunk{
+    width: 64px;
+    height: 24px;
+    background-color: #004aa0;
+    margin-left: 16px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.big-Grey-CHUNK{
+    width: 64px;
+    height: 24px;
+    background-color: #f6f6f6;
+    margin-left: 16px;
+    text-align: center;
+    color: #333333;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .main-nav{
+    margin-left: ;
+    margin-right: auto;
+}
+.main-nav1{
+    width: auto;
+    height: 48px;
+    background-color: #2e4b7c;
+    text-align: center;
+   font-size: 12px;
+}
+.main-nav1>ul>li>a{
+    color: #fff;
+}
+.main-navli{
+    height: 48px;
+    width: 59px;
+    float: left;
+    text-align: center;
+    margin: 0 20px;
+    padding:13.5px 0 0 13.5px;
+    white-space: inherit;
+}
+.main-nav-first{
+    height: 48px;
+    width: 121.5px;
+    float: left;
+    padding:13.5px 0 0 13.5px;
+}
+.main-navli1{
+    height: 48px;
+    width: 88px;
+    float: left;
+    text-align: center;
+    margin: 0 20px;
+    padding:13.5px 0 0 13.5px;
+} */
+
+
+/* .box{
+  校园新闻
+    width:  464px;
+     height: 360px;
+     background-color: #ffffff;
+     margin-left: 240px;
+     text-align: left;
+     font-size: 18px;
+     font-weight: 700;   
+     display: block;
+} 
+.side-Bar{
+  width: 465px;
+  height: 23px;
+  border: 1px solid red;
+}
+.span{
+     小块颜色 
+    width: 6px;
+    height: 18px;
+    background-color: #004aa0;
+    margin: 15px 0 10px 5px;
+    float: left;
+}
+.mian-Title{
+    margin: 10px 0 20px 5px;
+    float: left;
+}
+.mian-More{
+    margin: 11px 0 20px 5px;
+    float: right;
+    font-size: 14px;
+    padding-right: 30px;
+    font-weight: 400;
+}
+.mian-More>a{
+    color: #999;
+}
+.blue-Box{
+    width: 64px;
+    height: 24px;
+    background: #004aa0;
+    font-size: 12px;
+    clear: both;
+    text-align: center;
+    color: #fffff0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.white-Box{
+    width: 64px;
+    height: 24px;
+    background-color: #f6f6f6;
+    font-size: 12px;
+    text-align: center;
+    color: #b0b0b0;
+    font-weight: 400;
+    line-height: 24px;
+}
+.li-Left{
+     margin: 10px 0px 10px 10px; 
+     display: block;
+   
+}
+.text{
+    font-size: 12px;
+    width: 353px;
+    height: 44px;
+    float: right;
+    border: 1px solid #000;
+   
+
+}
+.text>a{
+    position: absolute;
+    right: 10;
+    top: 20;
+    display: inline-block;
+}
+.x1{
+    border: 2px solid blue;
+} */

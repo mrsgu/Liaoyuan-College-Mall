@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辽源职业技术学院</title>
+    <link rel="stylesheet" href="css/type.css">
+    <link rel="stylesheet" href="css/rester.css">
+  <script>
+      window.onload=function(){
+    var items=document.getElementsByClassName("item");
+    var circles=document.getElementsByClassName("circle");
+    var leftBtn=document.getElementById("btn-left");
+    var rightBtn=document.getElementById("btn-right");
+    var content=document.querySelector('.content');
+    var index=0;
+    var timer=null;
+    
+    //清除class
+    var clearclass=function(){
+        for(let i=0;i<items.length;i++){
+            items[i].className="item";
+            circles[i].className="circle";
+            circles[i].setAttribute("num",i);
+        }
+    }
+    /*只显示一个class*/
+    function move(){
+        clearclass();
+        items[index].className="item active";
+        circles[index].className="circle white";
+    }
+    //点击右边按钮切换下一张图片
+    rightBtn.onclick=function(){
+        if(index<items.length-1){
+            index++;
+        }
+        else{
+            index=0;
+        }
+        move();
+    }
+    //点击左边按钮切换上一张图片
+    leftBtn.onclick=function(){
+        if(index<items.length){
+            index--;
+        }
+        else{
+            index=items.length-1;
+        }
+        move();
+    }
+    //开始定时器，点击右边按钮，实现轮播
+    timer=setInterval(function(){
+        rightBtn.onclick();
+    },1000)
+    //点击圆点时，跳转到对应图片
+    for(var i=0;i<circles.length;i++){
+        circles[i].addEventListener("click",function(){
+            var point_index=this.getAttribute("num");
+            index=point_index;
+            move();
+        })
+    
+    }
+    //鼠标移入清除定时器，并开启一个三秒的定时器，使慢慢转动
+    content.onmouseover=function(){
+        clearInterval(timer);
+            timer=setInterval(function(){
+                rightBtn.onclick();
+            },3000)
+    }
+    //鼠标移出又开启定时器
+    content.onmouseleave=function(){
+        clearInterval(timer);
+        timer=setInterval(function(){
+            rightBtn.onclick();
+        },1500)
+    }
+    }
+  </script>
+</head>
+<body>
+   <div class="long-Box"> <!-- 顶部长条盒子 主 start-->
+     <div class="long-Box-FLOAT"><!-- 二级盒子 开始-->
+        <div class="label-Content"> <!--内容盒子 start-->
+            <a href=""> 学生</a>
+            <a href=""> 教师</a>
+                <a href=""> 校友</a>
+            
+                <a href=""> 访客</a>
+                    <a href=""> 常用链接</a>
+                
+                     <a href="">
+                <img src="./img/e-mail.png" alt="">
+                     </a>
+                
+                    <a href=""> 书记</a>
+               
+                      <a href=""> 校长</a>
+               
+                    <div style="float: right;">
+                        <a href=""> 
+                            <img src="./img/search.png"  style="margin: 4px 0 0 ;" alt="">
+                        </a>
+                    
+                    </div>
+               
+        </div><!--内容盒子 stop-->
+    </div><!-- 二级盒子 结束-->
+    </div><!-- 顶部长条盒子 主 stop-->
+
+
+    <div class="nav-List"><!-- 导航栏  开始-->
+
+
+
+
+        <div>  <!-- logo栏 start-->
+           
+            <a href="index.html">
+
+                <img src="./img/logo.png" alt="" style="width:321px ;height: 63px;margin: 18.5px 0;margin-left: 15%;float: left;">
+
+            </a>
+
+    <div class="nav-text"><!-- 功能栏 开始-->
+                
+                
+                <ul>
+
+
+                  <li>
+
+                        <a href="ly subordinate page.html">
+                            学校概况
+                        </a>
+
+                    </li>
+
+                        <li>
+
+                             <a href="school history.html">
+
+                                    学校历史
+
+                                </a>
+
+                            </li>
+                                
+
+
+                        
+
+
+
+                    </li>
+
+
+                    
+                    <li>
+
+                        <a href="">
+                            学院设置
+                        </a>
+                    </li>
+
+
+                    
+                    <li>
+
+                        <a href="">
+                            机构设置
+                        </a>
+
+                    </li>
+
+
+
+                    <li>
+
+                        <a href="">
+                            人才培养
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="ly secondary page.html">
+                            师资队伍
+                        </a>
+
+                    </li>
+
+                    
+                    <li>
+
+                        <a href="">
+                            科学研究
+                        </a>
+
+                    </li>
+
+                    
+                    <li>
+
+                        <a href="">
+                            合作交流
+                        </a>
+
+                    </li>
+
+                    
+                    <li>
+
+                        <a href="">
+                            招生就业
+                        </a>
+
+                    </li>
+
+                    
+                    <li>
+
+                        <a href="">
+                            人才招聘
+                        </a>
+
+                    </li>
+
+
+
+                </ul>
+
+
+
+            </div><!-- 功能栏 结束-->
+
+
+        </div> <!-- logo栏 end-->
+
+    </div><!-- 导航栏  结束-->
+
+
+
+
+       <!-- 轮播图 开始 -->
+
+            <div class="lunbo">
+                <div class="content">
+                <ul id="item">
+                    <li class="item">
+                        <a href="#"><img src="./img/index.jpg" ></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><img src="./img/index1.jpg" ></a>
+                    </li>
+                
+                </ul>
+                <div id="btn-left">  < </div>
+                <div id="btn-right"> > </div>
+                <ul id="circle" >
+                    
+                    <li class="circle"></li>
+                    <li class="circle"></li>
+                 
+                </ul>
+                </div>
+            </div>
+
+        <!-- 轮播图 结束 -->
+
+
+
+        <div class="main"><!-- 页面主体盒子 -->
+    
+        <div class="second-Box"> <!--二级盒子-->
+    
+        <div class="school-Paper">
+            <!-- 校园新闻盒子 -->
+        
+      <!-- 校园新闻标签 开始-->
+     <div class="blue-Chunk"></div>
+        <div style="margin-top: 15px; font-size: 20px; font-weight: 700;white-space: nowrap;">校园新闻
+        <a href="">
+            <div style="float: right;font-weight: 400;color: #999999;font-size: 14px;">  </div>
+        </a>
+     </div>  <!-- 校园新闻标签 结束-->
+
+
+
+ <!-- 新闻一盒子 开始 -->
+ <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+    
+    
+    <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+    <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+       <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+    </a>
+  </div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+   
+</div>  
+<!-- 新闻一盒子 结束 -->
+
+
+
+
+ <!-- 新闻一盒子 开始 -->
+ <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+    
+    
+    <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+    <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+       <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+    </a>
+  </div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+   
+</div>  
+<!-- 新闻一盒子 结束 -->
+
+
+
+ <!-- 新闻一盒子 开始 -->
+ <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+    
+    
+    <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+    <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+       <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+    </a>
+  </div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+   
+</div>  
+<!-- 新闻一盒子 结束 -->
+
+
+
+
+
+ <!-- 新闻一盒子 开始 -->
+ <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+    
+    
+    <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+    <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+       <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+    </a>
+  </div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+   
+</div>  
+<!-- 新闻一盒子 结束 -->
+    
+         
+
+ <!-- 新闻一盒子 开始 -->
+ <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+    
+    
+    <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+    <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+       <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+    </a>
+  </div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+   
+</div>  
+<!-- 新闻一盒子 结束 -->
+          
+        </div> 
+
+
+
+  
+        <div class="school-Service">
+
+ <!-- 校园新闻标签 开始-->
+ <div style="float: left;">
+    <div class="blue-Chunk"></div>
+    <div style="margin-top: 15px; font-size: 20px; font-weight: 700;white-space: nowrap;">服务
+        <a href="">
+        <div style="float: right;font-weight: 400;color: #999999;font-size: 14px;">  </div>
+    </a>
+    </div> 
+
+    <div style="width: 170px;height: 120px;  margin: 30px 25px 0px 20px;float: left;">
+
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/e9339b1d0cc18f6216f16a361413a3f6.jpg"  style="width: 170px;height: 120px;">
+
+            <span style="color: black;">学生服务</span>
+        </a>
+
+    </div>
+
+
+
+    <div style="width: 170px;height: 120px;  margin: 30px 25px 0 20px;float: left">
+
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/8ce165989ec4608567bb7159304acb39.jpg" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;">系部动态</span>
+        </a>
+
+    </div>
+
+
+    <div style="width: 170px;height: 120px;  margin: 30px 25px 0 20px;float: left">
+
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/d4a4c0ccc9f1aca4fcd0c7b0041e5ca5.png" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;">实训中心</span>
+        </a>
+
+    </div>
+
+
+    <div style="width: 170px;height: 120px; margin: 30px 25px 0 20px;float: left">
+
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/c57f9743f5df96e4f5aac811512e73f8.jpg" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;">办事大厅</span>
+        </a>
+
+    </div>
+
+
+    <div style="width: 170px;height: 120px; margin: 30px 25px 0 20px;float: left">
+
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/a2794ac294a81f5594919aaefb0094b5.png" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;">教学平台</span>
+        </a>
+
+    </div>
+
+
+
+    <div style="width: 170px;height: 120px;; margin: 30px 25px 0 20px;float: left">
+        
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/e4225a8b04e8a71d2273eba849da8822.png" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;">领导信箱</span>
+        </a>
+
+    </div>
+    
+
+    <div style="width: 170px;height: 120px;  margin: 30px 25px 0 20px;float: left">
+        
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/7bb185d00c1ef08a06c8cec0b699e49b.jpg" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;">专题报道</span>
+        </a>
+
+    </div>
+
+
+    <div style="width: 170px;height: 120px;  margin: 30px 25px 0 20px;float: left">
+        
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/51bd5ac1ccc8fb7b4107674f3e1d1486.jpg" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;"> 校友风采 </span>
+        </a>
+
+    </div>
+
+    <div style="width: 170px;height: 120px;  margin: 30px 25px 0 20px;float: left">
+        
+        <a href="">
+
+            <img src="https://p.ananas.chaoxing.com/star3/origin/80eb5d26c48ae2fdd79d51a0cf3e6aa6.jpeg" style="width: 170px;height: 120px;" alt="">
+            <span style="color: black;">校园风光</span>
+        </a>
+
+    </div>
+
+
+   </div><!-- 校园新闻标签 结束-->
+
+            
+</div> <!--二级盒子-->
+</div><!-- 页面主体盒子 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+<div class="main"><!-- 页面主体盒子 -->
+    
+    <div class="second-Box"> <!--二级盒子-->
+
+    <div class="school-Paper" style="margin-left: 3%;">
+        <!-- 教育新闻盒子 -->
+    
+  <!-- 教育新闻标签 开始-->
+ 
+ <div class="blue-Chunk"></div>
+ <div style="margin-top: 15px; font-size: 20px; font-weight: 700;white-space: nowrap;">教育新闻
+    <a href="">
+    <div style="float: right;font-weight: 400;color: #999999;font-size: 14px;">  </div>
+ </a>
+ </div>  <!-- 教育新闻标签 结束-->
+
+
+
+<!-- 新闻一盒子 开始 -->
+<div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+<div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+<a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+   <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+</a>
+</div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+
+</div>  
+<!-- 新闻一盒子 结束 -->
+
+
+
+
+<!-- 新闻一盒子 开始 -->
+<div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+<div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+<a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+   <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+</a>
+</div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+
+</div>  
+<!-- 新闻一盒子 结束 -->
+
+
+
+<!-- 新闻一盒子 开始 -->
+<div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+<div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+<a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+   <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+</a>
+</div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+
+</div>  
+<!-- 新闻一盒子 结束 -->
+
+
+
+
+
+<!-- 新闻一盒子 开始 -->
+<div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+<div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+<a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+   <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+</a>
+</div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+
+</div>  
+<!-- 新闻一盒子 结束 -->
+
+     
+
+<!-- 新闻一盒子 开始 -->
+<div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+<div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+<a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+   <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+</a>
+</div>
+<div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+
+<div class="big-Grey-CHUNK"> 2023-06</div>
+
+</div>  
+<!-- 新闻一盒子 结束 -->
+      
+    </div> 
+
+
+
+
+
+
+<!-- 通知公告盒子 -->
+
+    <div class="school-Education">  
+      
+
+<!-- 通知公告标签 开始-->
+<div style="float: left;">
+<div class="blue-Chunk"></div>
+<div style="margin-top: 15px; font-size: 20px; font-weight: 700;white-space: nowrap;">通知公告
+    <a href="">
+    <div style="float: right;font-weight: 400;color: #999999;font-size: 14px;">  </div>
+</a>
+</div> 
+
+    <!-- 新闻一盒子 开始 -->
+    <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+    <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+    <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+       <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+    </a>
+    </div>
+    <div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+    
+    <div class="big-Grey-CHUNK"> 2023-06</div>
+    
+    </div>  
+    <!-- 新闻一盒子 结束 -->
+
+
+
+
+
+        <!-- 新闻二盒子 开始 -->
+    <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+        <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+        <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+           <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+        </a>
+        </div>
+        <div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+        
+        <div class="big-Grey-CHUNK"> 2023-06</div>
+        
+        </div>  
+        <!-- 新闻二盒子 结束 -->
+
+
+
+
+
+
+        <!-- 新闻三盒子 开始 -->
+    <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+        <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+        <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+           <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+        </a>
+        </div>
+        <div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+        
+        <div class="big-Grey-CHUNK"> 2023-06</div>
+        
+        </div>  
+        <!-- 新闻三盒子 结束 -->
+
+
+
+
+
+
+
+        <!-- 新闻四盒子 开始 -->
+    <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+        <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+        <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+           <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+        </a>
+        </div>
+        <div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+        
+        <div class="big-Grey-CHUNK"> 2023-06</div>
+        
+        </div>  
+        <!-- 新闻四盒子 结束 -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- 新闻五盒子 开始 -->
+    <div style=" width: 435px;height: 77px; margin-left: 5px; margin-bottom: 5px;">
+
+
+        <div style="float: right;width: 353px; height: 45px;display: inline-block; ">
+        <a href="" style="font-size: 13px;color: #333333; height: 45px; ">
+           <div style="margin-top: 5px; margin-left: 10px"> 学院举办第九届吉林省“互联网+”大学生创新创业大赛双创专家进校园巡讲活动</div>
+        </a>
+        </div>
+        <div class="big-Chunk" style="margin-top: 20px;"> 06 </div>
+        
+        <div class="big-Grey-CHUNK"> 2023-06</div>
+        
+        </div>  
+        <!-- 新闻五盒子 结束 -->
+
+    </div><!-- 校园新闻标签 结束-->
+
+</div> <!--二级盒子-->
+</div><!-- 页面主体盒子 -->
+
+
+
+
+
+
+
+
+    <div  class="foot-Main"> <!-- 尾部一级盒子 -->
+
+        <div class="foot"><!-- 尾部二级盒子 -->
+
+            <div class="foot-Small" style="margin-left: 50px; background-color: #0c7492;"><!-- 小块盒子1  开始-->
+                
+
+                <img src="https://www.nwpu.edu.cn/images/foot33.png" alt="">
+             
+
+                <!-- 尾部  开始 -->
+                   <div class="small-Size">
+                    <h3>数字校园</h3>
+                </div>
+                <div  style="margin-top: 20px;" >
+                    <span class="small-Size">
+                        <a href=""  > 翱翔门户</a>
+                    </span>
+
+
+                    <span class="small-Size">
+
+                        <a href=""> 翱翔办公</a>
+
+                    </span>
+                    <span class="small-Size">
+                        <a href="">
+                            电子邮件
+                        </a>
+                    </span>
+
+                    <span class="small-Size">
+
+                        <a href="">校园公告</a>
+
+                    </span>
+
+                    <span class="small-Size">
+
+                        <a href="">图书文献</a>
+
+
+                    </span>
+
+                </div> <!-- 校园文化  结束 -->
+            </div><!-- 小块盒子  结束-->
+
+
+
+            <div class="foot-Small" style="background: #12347a;"><!-- 小块盒子2  开始-->
+                
+
+            <img src="https://www.nwpu.edu.cn/images/foot44.png" alt="">
+
+
+                 
+            <div class="small-Size"><!-- 校园服务  开始 -->
+                <h3>校园服务</h3>
+            </div>
+            <div  style="margin-top: 20px;" >
+                <span class="small-Size">
+                    <a href=""  > 信息公开</a>
+                </span>
+
+
+                <span class="small-Size">
+
+                    <a href=""> 校园地图</a>
+
+                </span>
+                <span class="small-Size">
+                    <a href="">
+                        校历校车
+                    </a>
+                </span>
+
+                <span class="small-Size">
+
+                    <a href="">预约平台</a>
+
+                </span>
+
+                <span class="small-Size">
+
+                    <a href="">全校统一报修</a>
+
+
+                </span>
+
+            </div> <!-- 校园服务  结束 -->
+
+
+
+
+
+
+
+            </div><!-- 小块盒子  结束-->
+
+
+
+
+
+            <div class="foot-Small"><!-- 小块盒子3  开始-->
+                
+                <img src="https://www.nwpu.edu.cn/images/ershida-pic0307.png" alt="">
+
+
+
+
+            </div><!-- 小块盒子  结束-->
+
+
+
+
+
+            <div class="foot-Small"><!-- 小块盒子4  开始-->
+                
+                <img src="https://www.nwpu.edu.cn/images/20230411ztjy.jpg" alt="">
+
+
+
+
+            </div><!-- 小块盒子  结束-->
+
+
+
+
+
+
+            <div class="foot-Small" style="margin-left: 50px;"><!-- 小块盒子5 开始-->
+                
+                <div class="foot-Double-BOX"  style="background-color: #20528b;" ><!-- 两个小块盒子 -->
+
+                    <div class="foot-Title"><!-- 校园服务  开始 -->
+                        <h3>文化辽职</h3>
+                    </div>
+                    <div  style="margin-top: 20px;" class="size" >
+                        <span class="size">
+                            <a href="">形象识别系统</a>
+                        </span>
+        
+        
+                        <span class="size">
+        
+                            <a href=""> 数字校史馆</a>
+        
+                        </span>
+                        <span class="size">
+                            <a href="">
+                                菁菁校园
+                            </a>
+                        </span>
+        
+                        <span class="size" >
+        
+                            <a href="" >辽职宣传片</a>
+        
+                        </span>
+        
+        
+                    </div> <!-- 校园服务  结束 -->
+
+                </div>
+
+                <div class="foot-Double-BOX">
+
+
+                    <img src="https://www.nwpu.edu.cn/images/stgd-pic0307.png" alt="">
+
+
+
+                </div><!-- 两个小块盒子 -->
+
+
+            </div><!-- 小块盒子  结束-->
+
+        
+
+           
+
+
+
+
+            
+
+            <div class="foot-Small"><!-- 小块盒子6  开始-->
+                
+
+
+                <img src="./img/function.png" alt="">
+
+
+            </div><!-- 小块盒子  结束-->
+
+
+
+            <div class="foot-Small"><!-- 小块盒子7  开始-->
+                
+
+                <img src="https://www.nwpu.edu.cn/images/20220530222638.png" alt="">
+
+
+
+            </div><!-- 小块盒子  结束-->
+
+
+
+
+            <div class="foot-Small"><!-- 小块盒子8  开始-->
+                
+
+
+                <img src="https://www.nwpu.edu.cn/images/pic20220426.png" alt="">
+
+
+            </div><!-- 小块盒子  结束-->
+
+
+
+            
+          <!-- 底部logo    开始 -->
+             <div>  <img src="./img/logo.png" alt="" class="foot-Logo" style="float: left;">
+            
+                    <!-- 文字地址   开始-->
+                <div style="width: 400px ;height: 98px;float: left;margin-top:6px ;color: #ffffff;">
+
+                    学校地址：吉林省辽源市光明街777号</br>
+                    联系方式：办公室0437-5210234 </br>招生办0437-5210125
+                    </br>邮编：136200
+                </div>
+                 <!-- 文字地址   结束-->
+
+
+                <!-- 备案号    开始 -->
+                <div style="width: 200px ;height: 98px;float: left;margin-top:6px ;color: #ffffff;font-size: 12px;margin-top: 70px;">  
+
+                    吉公网安备 </br>吉ICP备16002994号-10号 
+                
+                </div>
+                
+                 <!-- 备案号    结束 -->
+
+
+
+            </div>
+            <!-- 底部logo    结束 -->
+           
+
+          
+
+
+
+
+        </div>
+
+
+       
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
